@@ -1,0 +1,420 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fcffe3;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  column-gap: 1rem;
+  background: #0f8b3d;
+  color: #fff;
+  padding: 0.5% 16%;
+  z-index: 1000;
+  
+}
+
+
+.center-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  text-shadow: 2px 2px 4px rgb(20, 60, 1);
+  font-weight: 700;
+  font-size: 6vw;
+  color: white;
+  margin: 0;
+  text-align: center;
+  flex-grow: 0;
+  
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4vw 0.8vw;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-size: 1.3vw;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #0a5a33;
+  outline: none;
+}
+
+.logo {
+  grid-column: 3 / 4;
+  justify-self: end;
+  width: 15vw;
+  max-width: 80px;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4vw 0.8vw;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-size: 1.3vw;
+  
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #0a5a33;
+  outline: none;
+}
+
+.container {
+  max-width: 90%;
+  margin: 1.5% auto;
+  padding: 0 1%;
+  display: flex;
+  gap: 1.5vw;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 17%; /* la altura real de tu header */
+}
+
+
+aside {
+  flex: 1 1 55%;
+  max-width: 25%;
+  background: #aef4c6;
+  border-left: 0.5vw solid #0e8750;
+  padding: 2%;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+  min-width: 80px; /* se puede ajustar o remover si quieres */
+  box-sizing: border-box;
+ 
+}
+
+aside h2,
+aside h3 {
+  margin-bottom: 1rem;
+  color: #064d24;
+  font-size: 1.2rem;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+aside input[type="email"],
+aside input[type="text"],
+aside textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 0.2rem solid #0e8750;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+aside input[type="email"]:focus,
+aside input[type="text"]:focus,
+aside textarea:focus {
+  border-color: #064d24;
+  outline: none;
+}
+
+aside button {
+  width: auto;
+  padding: 0.7rem 1.2rem;
+  background-color: #0e8750;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+aside button:hover,
+aside button:focus {
+  background-color: #064d24;
+  outline: none;
+}
+
+
+main {
+  flex: 3 1 65%;
+  padding: 2%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.05);
+  min-width: 300px;
+  box-sizing: border-box;
+  
+}
+
+h2,
+h3 {
+  color: #0b7244;
+  font-size: 1.8rem;
+}
+
+h1 {
+  color: #edefed;
+  font-size: 5vw;
+  font-weight: 900;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section.banner {
+  text-align: center;
+}
+
+section.banner img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+article figure img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+article figure {
+  margin-bottom: 1rem;
+}
+
+.Volver {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  padding: 0.75rem 1.1rem;
+  background-color: rgb(4, 136, 61);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(12, 248, 134, 0.8);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+  font-size: 1rem;
+}
+
+.Volver:hover,
+.Volver:focus {
+  background-color: rgb(0, 40, 110);
+  outline: none;
+}
+
+footer {
+  background-color: hsl(132, 62%, 35%);
+  color: white;
+  padding: 20px 5%;
+  text-align: center;
+}
+
+.footer-contactos {
+  flex: 1 1 55%;
+  max-width: 25%;
+  background: #d9ece0;
+  border-left: 0.5vw solid #0e8750;
+  padding: 2%;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+  min-width: 100%; /* se puede ajustar o remover si quieres */
+  box-sizing: border-box;
+}
+/* Derechos reservados centrados en bloque independiente */
+.footer-top {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%; /* ancho máximo para centrar contenido */
+  margin: 0 auto;
+  text-align: center; /* textos alineados a la izquierda */
+}
+
+
+
+.footer-contactos h4 {
+  margin: 0.5rem 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #01824e;
+}
+
+.footer-contactos p {
+  margin: 0.3rem 0;
+  font-weight: 700;
+  color: #094d17;
+}
+
+.redes-sociales {
+  margin-top: 2rem;
+  display: flex;
+  gap: 5px; /* Reduce espacio entre imágenes */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si hay diferencias de tamaño */
+}
+
+.redes-sociales a {
+  padding: 0; /* elimina padding extra si existiera */
+  margin: 0;  /* elimina margen extra si existiera */
+}
+
+.redes-sociales a img {
+  width: 50px;  
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+.redes-sociales a.Instagram img {
+  width: 160px;  /* más grande solo instagram */
+  height: 160px;
+}
+.redes-sociales a.YouTube img {
+  width: 140px;  /* más grande solo instagram */
+  height: 140px;
+}
+.redes-sociales a:hover img,
+.redes-sociales a:focus img {
+  transform: scale(1.5);
+  outline: none;
+}
+
+
+.footer-mapa {
+  width: 100%;             /* Ocupa todo el ancho del contenedor */
+  max-width: auto;         /* Sin límite máximo, para responder en tamaño completo */
+  min-width: auto;         /* Sin restricción mínima */
+  flex: 0 0 auto;          /* No se encoge ni crece en flexbox */
+  box-sizing: border-box;  /* Para incluir padding y border en el tamaño */
+}
+
+
+
+.footer-mapa h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+
+@media (max-width: 900px) {
+  .footer-bottom {
+    max-width: 100%;
+  }
+}
+
+
+.tags span {
+  display: inline-block;
+  background-color: #d4f3d3;
+  color: #0e8750;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+details summary a {
+  color: #0e8750;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+details summary a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+  aside,
+  main {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.banner {
+  width: 90%;
+  height: auto;
+  max-width: 350px;
+}
